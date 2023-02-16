@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+header .header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-left .logo {
+  font-size: 14px;
+
+}
+
+header .header-left nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: 0.2s;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {
+  color: rgb(219, 219, 219)
+}
+
+header .hamburger {
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+header .hamburger div {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background-color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+      padding: 0 20px;
+  }
+
+  header .header-left .logo {
+      font-size: 12px;
+  }
+
+  header .hamburger {
+      display: block;
+  }
+  header .header-left nav {
+      margin: 0;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: fit-content;
+      background-color: #1e1e1e;
+      padding: 30px;
+      transition: 0.3s;
+      text-align: center;
+      z-index: -1;
+  }
+  header .header-left nav.active {
+      top: 70px;
+  }
+  header .header-left nav ul {
+      display: block;
+  }
+}
