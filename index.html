@@ -10,27 +10,58 @@
 </head>
 <body>
    <!-- HEADER -->
-   <header>
-        <div class="header-left">
-            <div class="logo">
-                <h1>Kacper Włodarczyk</h1>
+   <input type="checkbox" id="toggle">
+   <nav>
+        <a class="navbar-brand" href="#">
+            Kacper Włodarczyk
+        </a>
+        
+        <label class="navbar-toggler" for="toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">LinkedIn</a>
+            </li>
+        </ul>
+
+    </nav> 
+
+    <!-- END OF HEADER -->
+
+    <!-- ABOUT ME -->
+    <section class="container">
+        <div class="about-header">
+            <h1>About Me</h1>
+        </div>
+        <div class="row">
+            <div class="left">
+                <img src="images/profile.jpg">
             </div>
-            <nav>
-                <ul>
-                    <li><a href='' class='active'>Home</a></li>
-                    <li><a href='' class='active'>About Me</a></li>
-                    <li><a href='' class='active'>Projects</a></li>
-                    <li><a href='' class='active'>Contact</a></li>
-                </ul>
-            </nav>
+
+            <div class="right">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
         </div>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-   </header> 
+    </section>
+    <!-- END OF ABOUT ME -->
+
+    <!-- PROJECTS -->
 
 
+
+    <!-- END OF PROJECTS -->
 </body>
 </html>
