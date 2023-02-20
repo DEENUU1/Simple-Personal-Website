@@ -13,6 +13,7 @@
 html, body { 
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* SECTION TITLE */
@@ -35,6 +36,7 @@ html, body {
 
 /* NAVIGATION BAR */
 nav {
+  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 0 15%;
@@ -191,7 +193,6 @@ section {
 
 /* PROJECTS */
 .projects-content {
-  display: grid;
   margin: 3rem 0rem 4rem 0;
   align-items: center;
 }
@@ -228,10 +229,17 @@ section {
   text-align: justify;
   color: #9e9d9d;
 }
+.technology {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technology img {
+  width: 2.9rem;
+  height: 3.2rem;
+}
+
 @media only screen and (min-width: 1000px) {
-  .projects-content {
-    grid-template-columns: 1fr 1fr;
-  }
   .project-name {
     font-size: 1.4rem;
   }
@@ -242,7 +250,7 @@ section {
     margin: 0 auto;
   }
   .project-content-card {
-    width: 75%;
+    width: 50%;
   }
 }
 /* END OF PROJECTS */

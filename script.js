@@ -6,3 +6,4 @@ burgerIcon.addEventListener('click', function(){
     burgerIcon.classList.toggle('active'); 
    
 })
+

@@ -8,6 +8,7 @@
     <link rel="stylesheet" 
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Kacper Włodarczyk</title>
 </head>
 <body>
@@ -25,9 +26,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         </label>
 
         <ul class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link">Main</a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="https://github.com/DEENUU1/">GitHub</a>
             </li>
@@ -49,7 +47,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             <img src="images/profile.jpg" alt="profile image">
           </div>
           <div class="right">
-            <h1>Hi everyone!</h1>
+            <h1>Hi there!</h1>
             <h3>I AM PYTHON DEVELOPER</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam nam provident dolorem, quasi minima, magnam neque tenetur, optio non iste quibusdam tempore sunt repudiandae dolores voluptas corporis. Eaque, ad consequatur.</p>
           </div>
@@ -63,53 +61,82 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     </section>
 
     <!-- PROJECTS -->
-    <main class="projects">
-        <div class="section-title">
-          <p class="section-title-main">Projects</p>
-        </div>
-        <div class="projects-content">
-          <div class="project-content-card">
-            <a class="project-link" href="https://github.com/DEENUU1/DJANGO-WEATHER-MUSIC">
-              <img src="images/b.png" alt="project-image" />
-            </a>
-            <div class="project-info">
-              <p class="project-name">WeatherMusic</p>
-            </div>
-            <p class="project-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Necessitatibus nesciunt distinctio alias labore vitae et possimus
-              consequuntur quis facilis esse.
-            </p>
-            
+    <main>
+      <div class="section-title">
+        <p class="section-title-main">Projects</p>
+      </div>
+      <div class="projects-content" data-aos="fade-left">
+        <div class="project-content-card">
+          <a class="project-link" href="https://github.com/DEENUU1/DJANGO-WEATHER-MUSIC">
+            <img src="images/b.png" alt="project-image" />
+          </a>
+          <div class="project-info">
+            <p class="project-name">WeatherMusic</p>
           </div>
-          <div class="project-content-card">
-            <a class="project-link" href="https://github.com/DEENUU1/DJANGO-ECOMMERCE-WEBSITE-WITH-API">
-              <img src="images/c.png" alt="project-image" />
-            </a>
-            <div class="project-info">
-              <p class="project-name">Ecommerce website</p>
-            </div>
-            <p class="project-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Necessitatibus nesciunt distinctio alias labore vitae et possimus
-              consequuntur quis facilis esse.
-            </p>
+          <p class="project-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Necessitatibus nesciunt distinctio alias labore vitae et possimus
+            consequuntur quis facilis esse.
+          </p>
+          <div class="technology">
+            <img src="images/python.png"/>
+            <img src="images/django.png"/>
+            <img src="images/javascript.png"/>
+            <img src="images/docker.png"/>
+            <img src="images/postgresql.png"/>
+            <img src="images/html.png"/>
+            <img src="images/css.png"/>
+            <img src="images/bootstrap.jpg"/>
+            <img src="images/spotify.png"/>
           </div>
-          <div class="project-content-card">
-            <a class="project-link" href="https://github.com/DEENUU1/Portflio-and-blog-web-page-DJANGO">
-              <img src="images/d.gif" alt="project-image" />
-            </a>
-            <div class="project-info">
-              <p class="project-name">Ecommerce website</p>
-            </div>
-            <p class="project-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Necessitatibus nesciunt distinctio alias labore vitae et possimus
-              consequuntur quis facilis esse.
-            </p>
-          </div> 
         </div>
-  
+        <div class="project-content-card" data-aos="fade-left">
+          <a class="project-link" href="https://github.com/DEENUU1/DJANGO-ECOMMERCE-WEBSITE-WITH-API">
+            <img src="images/c.png" alt="project-image" />
+          </a>
+          <div class="project-info">
+            <p class="project-name">Ecommerce website</p>
+          </div>
+          <p class="project-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Necessitatibus nesciunt distinctio alias labore vitae et possimus
+            consequuntur quis facilis esse.
+          </p>
+          <div class="technology">
+            <img src="images/python.png"/>
+            <img src="images/django.png"/>
+            <img src="images/javascript.png"/>
+            <img src="images/docker.png"/>
+            <img src="images/postgresql.png"/>
+            <img src="images/html.png"/>
+            <img src="images/css.png"/>
+            <img src="images/paypal.png"/>
+          </div>
+        </div>
+        <div class="project-content-card" data-aos="fade-left">
+          <a class="project-link" href="https://github.com/DEENUU1/Portflio-and-blog-web-page-DJANGO">
+            <img src="images/d.gif" alt="project-image" />
+          </a>
+          <div class="project-info">
+            <p class="project-name">Portfolio and Blog</p>
+          </div>
+          <p class="project-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Necessitatibus nesciunt distinctio alias labore vitae et possimus
+            consequuntur quis facilis esse.
+          </p>
+          <div class="technology">
+            <img src="images/python.png"/>
+            <img src="images/django.png"/>
+            <img src="images/javascript.png"/>
+            <img src="images/html.png"/>
+            <img src="images/css.png"/>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+
     <!-- END OF PROJECTS -->
 
 
@@ -120,5 +147,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     </footer>
     <!-- END OF FOOTER -->
 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
