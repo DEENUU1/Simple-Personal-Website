@@ -8,33 +8,31 @@
     <link rel="stylesheet" 
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Kacper Włodarczyk</title>
 </head>
 <body>
+  
    <!-- HEADER -->
-   <input type="checkbox" id="toggle">
-   <nav>
-        <a class="navbar-brand" href="#">
-            Kacper Włodarczyk
-        </a>
-        
-        <label class="navbar-toggler" for="toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
 
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/DEENUU1/">GitHub</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/kacper-wlodarczyk/">LinkedIn</a>
-            </li>
+   <header id="navbar">
+    <nav class="navbar-container container">
+      <a href="/" class="home-link">
+        Kacper Włodarczyk
+      </a>
+      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="navbar-menu" aria-labelledby="navbar-toggle">
+        <ul class="navbar-links">
+          <li class="navbar-item"><a class="navbar-link" href="#L1">Projects</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="https://github.com/DEENUU1">GitHub</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="https://www.linkedin.com/in/kacper-wlodarczyk/">LinkedIn</a></li>
         </ul>
-
-    </nav> 
+      </div>
+    </nav>
+  </header>
 
     <!-- END OF HEADER -->
 
@@ -47,9 +45,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             <img src="images/profile.jpg" alt="profile image">
           </div>
           <div class="right">
-            <h1>Hi there!</h1>
-            <h3>I AM PYTHON DEVELOPER</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam nam provident dolorem, quasi minima, magnam neque tenetur, optio non iste quibusdam tempore sunt repudiandae dolores voluptas corporis. Eaque, ad consequatur.</p>
+            <div class="text-animation">
+              <h1>Welcome</h1>
+            </div>
+            <h2> > <p> I am trying to build cool projects.</p> </h2>
+            <p> One day I will get my personal Jarvis...</p>
+            
           </div>
         </div>
         <ul class="links-list">
@@ -61,22 +62,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     </section>
 
     <!-- PROJECTS -->
+
     <main>
-      <div class="section-title">
+      <div class="section-title" id="L1">
         <p class="section-title-main">Projects</p>
       </div>
-      <div class="projects-content" data-aos="fade-left">
+      <div class="projects-content">
+        <div class="project-content-card">
+          <a class="project-link" href="https://github.com/DEENUU1/news-summarizer">
+            <img src="images/newssummar.gif" alt="project-image 1" />
+          </a>
+          <div class="project-info">
+            <p class="project-name">VOICE NEWS SUMMARIES</p>
+          </div>
+          <p class="project-description">
+            Stay up to date with the latest information
+            This application allows you to process press articles, 
+            display them in the console, save them to a .docx file 
+            and convert text to speech.
+          </p>
+          <div class="technology">
+            <img src="images/python.png"/>
+          </div>
+        </div>
         <div class="project-content-card">
           <a class="project-link" href="https://github.com/DEENUU1/DJANGO-WEATHER-MUSIC">
-            <img src="images/b.png" alt="project-image" />
+            <img src="images/b.png" alt="project-image 2" />
           </a>
           <div class="project-info">
             <p class="project-name">WeatherMusic</p>
           </div>
           <p class="project-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Necessitatibus nesciunt distinctio alias labore vitae et possimus
-            consequuntur quis facilis esse.
+            Music based on the weather and the most popular news in your country.
+            This application allows you to check actuall weather and give a random playlist on spotify based on weather. You also check the most popular news in your country.
+            For more content you can register to the newsletter to get weakly interesting informations.
           </p>
           <div class="technology">
             <img src="images/python.png"/>
@@ -87,20 +106,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             <img src="images/html.png"/>
             <img src="images/css.png"/>
             <img src="images/bootstrap.jpg"/>
-            <img src="images/spotify.png"/>
           </div>
         </div>
-        <div class="project-content-card" data-aos="fade-left">
+        <div class="project-content-card">
           <a class="project-link" href="https://github.com/DEENUU1/DJANGO-ECOMMERCE-WEBSITE-WITH-API">
-            <img src="images/c.png" alt="project-image" />
+            <img src="images/c.png" alt="project-image 3" />
           </a>
           <div class="project-info">
             <p class="project-name">Ecommerce website</p>
           </div>
           <p class="project-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Necessitatibus nesciunt distinctio alias labore vitae et possimus
-            consequuntur quis facilis esse.
+            It is a fully functional website for online sales. It was written in Django and uses the Django Rest Framework. It has many functionalities such as: writing product reviews, adding to the basket, payments via PayPal, writing messages, creating user accounts and many others. All functions are included in the documentation. 
           </p>
           <div class="technology">
             <img src="images/python.png"/>
@@ -110,20 +126,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             <img src="images/postgresql.png"/>
             <img src="images/html.png"/>
             <img src="images/css.png"/>
-            <img src="images/paypal.png"/>
           </div>
         </div>
-        <div class="project-content-card" data-aos="fade-left">
+        <div class="project-content-card">
           <a class="project-link" href="https://github.com/DEENUU1/Portflio-and-blog-web-page-DJANGO">
-            <img src="images/d.gif" alt="project-image" />
+            <img src="images/d.gif" alt="project-image 4"/>
           </a>
           <div class="project-info">
             <p class="project-name">Portfolio and Blog</p>
           </div>
           <p class="project-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Necessitatibus nesciunt distinctio alias labore vitae et possimus
-            consequuntur quis facilis esse.
+            This is my first web and Django project. In this project I used: Python, Django, HTML, CSS, and JAVASCRIPT. Here you can download all files and customise them for your self. In the link down below you can see my full version of this project. Also down below I will tell you everything about configuration.
           </p>
           <div class="technology">
             <img src="images/python.png"/>
@@ -135,22 +148,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         </div>
       </div>
     </main>
-    
-
     <!-- END OF PROJECTS -->
-
 
     <!-- FOOTER -->
     <footer id="footer">
       <a href="#">Kacper Włodarczyk © 2023</a><br>
-      <p>kacperwlodarczyk@protonmail.com</p>
+      <a href="mailto:kacperwlodarczyk@protonmail.com">
+        <p>kacperwlodarczyk@protonmail.com</p>
+      </a>
+      
     </footer>
     <!-- END OF FOOTER -->
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
 </body>
 </html>

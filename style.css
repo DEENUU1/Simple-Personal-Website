@@ -8,14 +8,19 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
-
 html, body { 
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
 }
-
+:root {
+  --bg-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 85%);
+  --text-color-focus: white;
+  --bg-contrast: hsl(0, 0%, 25%);
+}
 /* SECTION TITLE */
 .section-title {
   font-size: 2rem;
@@ -35,85 +40,146 @@ html, body {
 /* END OF SECTION TITLE */
 
 /* NAVIGATION BAR */
-nav {
-  top: 0;
+.container {
+  max-width: 1000px;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#navbar {
+  --navbar-height: 64px;
+  position: fixed;
+  height: var(--height);
+  background-color: var(--bg-color);
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.navbar-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 15%;
-  height: 75px;
-  line-height: 75px;
-  background: #000000;
-}
-nav .navbar-brand {
-  color: #dedede;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: .5px;
-}
-nav .nav-list {
-  display: flex;
-}
-nav .nav-list .nav-item {
-  cursor: pointer;
   height: 100%;
-  padding: 0 30px;
-  transition: .4s;
+  align-items: center;
 }
-nav .nav-list .nav-item:hover {
-  background: #484848;
+.navbar-item {
+  margin: 0.4em;
+  width: 100%;
 }
-nav .nav-list .nav-link {
-  color: #dedede;
-  font-size: 18px;
-  font-weight: 500;
+.home-link,
+.navbar-link {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
 }
-nav .navbar-toggler {
-  display: none;
-  height: min-content;
-  margin: 18px -10px 0 0;
+.home-link:is(:focus, :hover) {
+  color: var(--text-color-focus);
+}
+.navbar-link {
+  justify-content: center;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+.navbar-link:is(:focus, :hover) {
+  color: var(--text-color-focus);
+  background-color: var(--bg-contrast);
+}
+
+#navbar-toggle {
   cursor: pointer;
-}
-nav .navbar-toggler .bar {
+  border: none;
+  background-color: transparent;
   width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background: #dedede;
-  border-radius: 10%;
-  transition: .4s;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-input {
-  display: none;
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+  background-color: var(--text-color);
 }
-input:checked ~ nav .nav-list {
-  transform: translateY(0);
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+  background-color: var(--text-color-focus);
 }
-@media (max-width: 935px) {
-  nav {
-      padding: 0 2rem;
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
+  transform: rotate(45deg);
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
+  transform: rotate(-45deg);
+}
+#navbar-menu {
+  position: fixed;
+  top: var(--navbar-height);
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+}
+#navbar-toggle[aria-expanded="true"] + #navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+.navbar-links {
+  list-style: none;
+  position: absolute;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
+  padding: 1em;
+}
+@media screen and (min-width: 700px) {
+  #navbar-toggle,
+  #navbar-toggle[aria-expanded="true"] {
+    display: none;
   }
-  nav .nav-list .nav-item {
-      padding: 0 20px;
+  #navbar-menu,
+  #navbar-toggle[aria-expanded="true"] #navbar-menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: block;
+    height: 100%;
+  }
+  .navbar-links,
+  #navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
   }
 }
-@media (max-width: 675px) {
-  nav .nav-list {
-      display: grid;
-      position: absolute;
-      background: #404040;
-      width: 100%;
-      top: 75px;
-      left: 0;
-      transform: translateY(-100%);
-      z-index: -1;
-      transition: .6s;
-  }
-  nav .nav-list .nav-item {
-      padding-left: 35px;
-  }
-  nav .navbar-toggler {
-      display: grid !important;
-  }
-}
+
+
 /* END OF NAVIGATION BAR */
 
 /* ABOUT ME */
@@ -148,6 +214,17 @@ section {
 .right h1 {
   font-size: 3rem;
   font-weight: 800;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    typing 1s steps(60, end) forwards;
+}
+.text-animation {
+  display: inline-block;
+}
+@keyframes typing {
+    from {width: 0}
+    to {width: 100% }
 }
 .right p{
   text-align: justify;
@@ -172,11 +249,9 @@ section {
 .link-item a:hover {
   background-color: rgb(70, 70, 70);
 }
-
 .link-item {
   margin: 0 1rem;
 }
-
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
@@ -193,6 +268,7 @@ section {
 
 /* PROJECTS */
 .projects-content {
+  display: grid;
   margin: 3rem 0rem 4rem 0;
   align-items: center;
 }
@@ -201,7 +277,7 @@ section {
   width: 85%;
   box-shadow: black 0px 1px 5px;
   padding: 1rem;
-  background-color: white;
+  background-color: --text-color;
 }
 .project-content-card img {
   width: 100%;
@@ -233,13 +309,15 @@ section {
   display: flex;
   flex-wrap: wrap;
 }
-
 .technology img {
-  width: 2.9rem;
-  height: 3.2rem;
+  width: 2.7rem;
+  height: 3rem;
 }
 
 @media only screen and (min-width: 1000px) {
+  .projects-content {
+    grid-template-columns: 1fr 1fr;
+  }
   .project-name {
     font-size: 1.4rem;
   }
@@ -250,7 +328,7 @@ section {
     margin: 0 auto;
   }
   .project-content-card {
-    width: 50%;
+    width: 80%;
   }
 }
 /* END OF PROJECTS */
@@ -259,7 +337,7 @@ section {
 #footer {
   position: absolute;
   width: 100%;
-  background-color: black;
+  background-color: var(--bg-color);
   color: #fff;
   text-align: center;
   padding: 10px px;
