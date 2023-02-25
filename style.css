@@ -263,6 +263,9 @@ section {
   .link-item {
     margin: 0.5rem 0;
   }
+  .left img {
+    margin-top: 30px;
+  }
 }
 /* END OF ABOUT ME */
 
